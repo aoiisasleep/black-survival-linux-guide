@@ -174,11 +174,8 @@ fi
 # Start the game
 wine "$GAME_LAUNCHER"
 
-while ! pgrep -f "BlackSurvival.exe" >/dev/null; do
-    sleep 1
-done
-
-while pgrep -f "BlackSurvival.exe" >/dev/null; do
+while pgrep -f "Project Lumia Launcher.exe" >/dev/null \
+   || pgrep -f "BlackSurvival.exe" >/dev/null; do
     sleep 1
 done
 
